@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+  <title>Login Page</title>
+  <link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{%static 'icofont/icofont.min.css' %}">
+  <style type="text/css">
+   #c {
+  height: 400px;
+  width: 600px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+  font-family: charlesworth;
+  padding-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-family: charlesworth;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  width: 50%;
+  padding: 10px;
+  margin-left: 150px;
+  margin-bottom: 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: teal;
+}
+  </style>
+
+  <div style="background-image:url({%static 'images/mouse.jpg' %}); background-size: cover; padding-top: 100px; padding-bottom: 100px">
+  <div class="container" id="c">
+  <div class="row">
+    <h1>Login</h1>
+    <form method="POST" action="">
+      {% csrf_token %}
+      <label for="username">Email:</label>
+      <input type="email" id="username" name="em" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="pw" required>
+      <a href="{% url 'forget' %}" style="padding-left: 400px;">Forget Password</a><br>
+      <input type="submit" value="Login"><br>
+      <a href="{% url 'register'%}">Create New Account</a>
+    </form>
+  </div></div></div>
+
+</body>
+</html>    
+{% endblock %}

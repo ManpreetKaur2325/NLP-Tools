@@ -1,0 +1,159 @@
+{% load static %}
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'icofont/icofont.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/aos.css' %}">
+    <style type="text/css">
+       .navbar{
+            background-color:teal;
+            
+        }
+        .navbar li{
+            float: left;
+            list-style: none;
+            margin: 10px 15px;
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+            font-family: sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .navbar li a:hover{
+            color: white; 
+            border-bottom: 3px solid white;   
+
+        }
+           
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <img src={%static "images/c.png" %} height="60px" width="60px">
+    <a class="navbar-brand" href="#" style="font-family: charlesworth; font-size: 35px; font-weight: bold;">CONVERTIO</a>
+      </div>
+      <div class="col-4"></div>
+      <div class="col-4 p-3">
+        <i class="icofont-facebook p-2" style="font-size: 20px;"></i>
+        <i class="icofont-twitter p-2" style="font-size: 20px;"></i>
+        <i class="icofont-instagram p-2" style="font-size: 20px;"></i>
+        <i class="icofont-youtube p-2" style="font-size: 20px;"></i>
+        <button type="submit" style="background-color: teal; border: transparent;color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block;font-size: 20px;">Login now</button>
+      </div>
+    </div>
+  </div>
+  
+    <nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container-fluid">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
+      <ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="#">HOME</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="#">ABOUT US</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="#">BLOGS</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">LINKS</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="#">CONTACT US</a>
+        </li>
+        
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+    </header>
+    
+    {% block content %}
+
+
+    {% endblock %}
+    <div class="row ">
+        <div class="col-1 bg-dark" ></div>
+        <div class="col-7 p-4  text-light bg-dark" >
+            <div class="row">
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col-3"><img  src={%static "images/c.png" %} width="60px"></div>
+                        
+                        <div class="col-9"><h1 class=" mb-4 mt-3" style="font-family:charlesworth;font-weight: bold; color:white;">Convertio
+                        </h1></div>
+                    </div>
+                    
+                    
+                    <p class="pt-4" style="color:#F5F5F5;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <i class="icofont-location-pin"></i><span style="font-family: sans-serif;"> Edmonton,Alberta</span><br><br>
+                    <i class="icofont-phone"></i><span style="font-family: sans-serif;"> +1(219)456-6755</span><br><br>
+                    <i class="icofont-ui-message"></i><span style="font-family: sans-serif;"> info@gmail.com</span><br>
+                </div>
+
+                <div class="col-4">
+                    <h3 class="mb-3 mt-3 p-2" style="font-family:sans-serif;">Useful Links</h3>
+                    <a href="" class="p-3" style="font-family: sans-serif;text-decoration:none;color:#F5F5F5;"><i class="icofont-double-right"></i>lorem ipsum</a><br><br>
+                    <a href="" class="p-3" style="font-family: sans-serif;text-decoration:none;color:#F5F5F5;"><i class="icofont-double-right"></i>lorem ipsum</a><br><br>
+                    <a href="" class="p-3" style="font-family: sans-serif;text-decoration:none;color:#F5F5F5;"><i class="icofont-double-right"></i>lorem ipsum</a><br><br>
+                    <a href="" class="p-3" style="font-family: sans-serif;text-decoration:none;color:#F5F5F5;"><i class="icofont-double-right"></i>lorem ipsum</a><br><br>
+                    <a href="" class="p-3" style="font-family: sans-serif;text-decoration:none;color:#F5F5F5;"><i class="icofont-double-right"></i>lorem ipsum</a><br><br>
+
+                </div>
+                <div class="col-4">
+                    <h3 class="mb-3 mt-3 p-2" style="font-family: sans-serif;">Services</h3>
+                    <a href="" class="p-3" style="font-family: sans-serif;text-decoration:none;color:#F5F5F5;"><i class="icofont-double-right"></i>lorem ipsum</a><br><br>
+                    <a href="" class="p-3" style="font-family: sans-serif;text-decoration:none;color:#F5F5F5;"><i class="icofont-double-right"></i>lorem ipsum</a><br><br>
+                    <a href="" class="p-3" style="font-family: sans-serif;text-decoration:none;color:#F5F5F5;"><i class="icofont-double-right"></i>lorem ipsum</a><br><br>
+                    <a href="" class="p-3" style="font-family: sans-serif;text-decoration:none;color:#F5F5F5;"><i class="icofont-double-right"></i>lorem ipsum</a><br><br>
+                    <a href="" class="p-3" style="font-family: sans-serif;text-decoration:none;color:#F5F5F5;"><i class="icofont-double-right"></i>lorem ipsum</a>
+                </div>
+            </div>
+        </div>  
+        <div class="col-4 p-5" style="background-color:#36454f ;color:white;">
+            <h2 class="mb-2 " style="font-family: charlesworth;font-weight:bold;">Subscribe to Our Newsletter</h2><br>
+            <p style="color: #F5F5F5;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor.</p>
+            <form>
+                <input type="email" name="" placeholder="Enter your e-mail" class="form-control p-3"><br>
+            </form>
+                <i class="icofont-facebook border p-2 rounded-circle "></i>&nbsp;&nbsp;
+                <i class="icofont-twitter border p-2 rounded-circle "></i>&nbsp;&nbsp;
+                <i class="icofont-instagram border p-2 rounded-circle "></i>&nbsp;&nbsp;
+                <i class="icofont-youtube border p-2 rounded-circle "></i>&nbsp;&nbsp;
+            
+        </div>
+        
+    </div>
+    
+    <div class="row">
+                <div class="col-1" style="background-color:#36454f ;color: white; "></div>
+                <div class="col-7" style="background-color:#36454f ;color: white; ">
+                    <p class="p-2">Copyright &copy; 2024 Convertio,All Rights Reserved</p>
+                </div>
+                <div class="col-4 bg-dark p-2" style="text-align: center;">
+                    <a href="" style="text-decoration:none;color:#F5F5F5;">Home</a><span style="font-weight: bold;color: white;"> | </span><a href="" style="text-decoration:none;color:#F5F5F5;">About Us</a><span style="font-weight: bold;color: white;"> | </span><a href="" style="text-decoration:none;color:#F5F5F5;">Contact Us</a>
+                </div>
+                
+            </div>
+        </div>
+<script type="text/javascript" src="{%static 'js/aos.js' %}"></script>
+<script type="text/javascript">
+    AOS.init();
+</script>
+</body>
+</html>

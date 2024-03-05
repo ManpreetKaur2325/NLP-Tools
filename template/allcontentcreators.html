@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		 body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+    }
+    .card {
+        width: 300px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        margin: 20px;
+        padding: 20px;
+    }
+    .card img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+    .card h5 {
+        color: #333;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+    .card p {
+        color: #666;
+        font-size: 1em;
+    }
+    .card a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+	</style>
+</head>
+<body>
+<div class="container">
+<div class="row">
+
+{% for i in data %}
+<div class="col-md-4">
+	<div class="card shadow" style="width: 18rem;">
+		{% if i.image %}
+		<img src="{{i.image.url}}" class="card-img-top" alt="...">
+		{% endif %}
+		<div class="card-body">
+			<h5 class="card-title">{{i.name}}</h5>
+			<p class="card-text"><span style="font-weight: bold;">Bio: </span>{{i.bio}}</p>
+			<p class="card-text"><span style="font-weight: bold;">Website: </span>{{i.website}}</p>
+
+		</div>
+	</div>
+</div>
+{% endfor %}
+</div></div>
+</body>
+</html>
+{% endblock %}

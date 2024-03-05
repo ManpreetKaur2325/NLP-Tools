@@ -1,0 +1,31 @@
+{% extends 'sidebar.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>review</title>
+<body>
+	<div class="container" style="max-width: 600px;margin: 100px auto;padding-left: 50px;
+	padding-bottom: 50px; padding-right: 50px; padding-top: 0px;
+    background-color: #fff;border-radius:;box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);">
+	<form method="POST" action="">
+	{% csrf_token %}
+		<img src="{%static 'images/r4.png' %}" style="display: block;margin-left: auto; margin-right: auto; " width="250px;">
+		
+		<label style="margin-top: 10px;color: #333;font-family: Charlesworth; font-size:18px; font-weight: bold;">Title</label><br>
+		<input type="text" name="ti" style="margin-top: 10px;color: #333;font-family: Charlesworth; border: 1px solid black;" required class="form-control"><br>
+		<label style="margin-top: 10px;color: #333;font-family: Charlesworth;font-size:18px;font-weight: bold;">Message</label><br>
+		<textarea name="msg" required style="padding:10px; border: 1px solid black;" class="form-control"></textarea><br>
+		<button type="submit" style="padding: 10px;margin-top: 10px; margin-left:160px;background-color: black;color: white;border: none;border-radius: 3px;cursor: pointer;font-family: Charlesworth;width: 200px; font-size: 20px;">Submit</button>
+	</form>
+    {% if msg == 1 %}
+    <script type="text/javascript">
+    	alert("Data successfully added")
+    </script>
+</div>
+
+{% endif %}
+</body>
+</html>
+{% endblock %}

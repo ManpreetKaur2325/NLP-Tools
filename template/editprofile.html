@@ -1,0 +1,85 @@
+{% extends 'sidebar.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style>
+    body {
+      font-family: arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+    
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      margin-top: 100px;
+      margin-bottom: 100px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-family: charlesworth;
+      color: white;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: white;
+      font-family: charlesworth;
+      font-size: 18px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] 
+    input[type="number"] 
+    input[type="phone"] 
+    input[type="date"] 
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+    
+  </style>
+	<div class="container">
+	<form method="POST" action="" style="background: teal; padding: 50px;">
+    {% csrf_token %}
+	  <h1>Edit Profile</h1>
+    
+	  <label>Name</label>	
+	  <input type="text" name="nm" value="{{i.name}}" class="form-control">
+	  <label>Email</label>
+	  <input type="email" name="em" value="{{i.email}}" class="form-control">
+	  <label>Age</label>
+	  <input type="number" name="age" value="{{i.age}}" class="form-control">
+    <label>Bio</label>
+    <input type="text" name="bio" value="{{i.bio}}" class="form-control">
+	  <label>Pincode</label>	
+	  <input type="text" name="pin" value="{{i.pincode}}" class="form-control">
+	  <label>Contact</label>	
+	  <input type="phone" name="cont"  value="{{i.contact}}"class="form-control">
+	  <label>DOB</label>	
+	  <input type="date" name="date" value="{{i.dob}}" class="form-control">
+    <label>Address</label>	
+	  <textarea class="form-control" value="" name="add">{{i.address}}</textarea><br>
+    <button type="submit" style="padding: 10px;margin-top: 10px;background-color: white;
+        color: teal;border: none;border-radius: 3px;cursor: pointer; font-weight: bold;">Save Changes</button>
+    
+	</form>
+</div>
+</body>
+</html>
+{% endblock %}

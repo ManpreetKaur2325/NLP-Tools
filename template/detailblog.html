@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div class="container p-5">
+		<div class="row" >
+			<div class="col-6">
+				<img src="{{ i.image.url}}" height="400px" width="500px" style="border: 4px solid gray;">
+				
+				<p style="font-size:18px;padding-top: 10px;"><span style="font-weight:bold;">Published On: </span>{{ i.pub_date}}</p>
+				<p style="font-size:18px;"><span style="font-weight:bold;">Creator: </span>{{ i.creator}}</p>
+			</div>
+			<div class="col-6" style="background-color: #F5F5F5;">
+				<h2 style="color:gray;font-weight: bold;padding: 5px;">{{ i.title}}</h2><hr>
+				<p style="font-size: 18px;padding: 10px;">{{ i.content }}</p>
+			</div>
+		</div>
+	</div>
+	
+{% endblock %}
